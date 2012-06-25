@@ -14,10 +14,12 @@ echo "Una vez que entres en modo bootloader, ejecuta el sbf_flash"
 echo "Apreta enter cuando se termine de flashear y reinicie"
 read -p ""
 adb wait-for-device
+adb shell "echo 'entrando al adb, xq sino no funciona'"
 echo "reiniciando"
 adb reboot
 adb wait-for-device
 echo "Si los dioses de los bits estuvieron con nosotros, el celular deberia estar rooteado, persistiendo el root"
+echo "Copiando Su, busybox y superuser.apk"
 adb remount
 adb push su /system/bin/su
 adb shell "chmod 6755 /system/bin/su"
@@ -26,8 +28,10 @@ adb push busybox /system/xbin/busybox
 adb shell "chmod 755 /system/xbin/busybox"
 adb shell "/system/xbin/busybox --install /system/xbin"
 adb push Superuser.apk /system/app/Superuser.apk
+echo "Hecha la persistencia"
 echo "limpiando"
 adb shell "rm /data/preinstall_md5/*"
+adb shell "echo /sbin/hotplug > /sys/kernel/uevent_helper"
 echo "Ultima reiniciada (te lo prometo)"
 adb reboot
 adb wait-for-device
