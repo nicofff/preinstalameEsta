@@ -8,7 +8,7 @@ adb push root.sh /data/preinstall_md5/
 adb shell "ln -s /sys/kernel/uevent_helper /data/preinstall_md5/first.md5"
 adb shell "ln -s /sys/class/mem/null/uevent /data/preinstall_md5/second.md5"
 adb shell "chmod 777 /data/preinstall_md5/root.sh"
-echo "Todos los archivos listos en el celular, ahora flashea el CG66 (sbf_flash -r --preinstall CG66.img romPersonal.sbf)"
+echo "Todos los archivos listos en el celular, ahora flashea el fixed.sbf (./sbf_flash -r fixed.sbf)"
 echo "Para entrar en modo bootloader apaga el celular y reinicialo apretando el boton de power, el de la camara, y el de bajar el volumen"
 echo "Una vez que entres en modo bootloader, ejecuta el sbf_flash"
 echo "Apreta enter cuando se termine de flashear y reinicie"

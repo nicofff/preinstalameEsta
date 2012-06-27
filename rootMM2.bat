@@ -44,7 +44,7 @@ echo Sin cerrar la ventana del cmd, desconectar el celular , apagarlo
 
 echo y reinicialo apretando el boton de power, el de la camara, y el de bajar el volumen ;
 
-echo Una vez que entres en modo bootloader planchar el firmware.sbf 
+echo Una vez que entres en modo bootloader planchar el fixed.sbf 
 
 echo (esta dentro de "firmware.7z") mediante rsdlite
 
