@@ -30,7 +30,7 @@ echo "after it restarts, enable USB debugging and press enter to continue..."
 read -p ""
 
 adb wait-for-device
-adb shell "echo 'doing something on adb, otherwise it doesn't work'"
+adb shell "echo 'doing something on adb, otherwise it does not work'"
 echo "restarting"
 adb reboot
 adb wait-for-device
