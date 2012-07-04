@@ -28,15 +28,15 @@ color 0b
 cd "%~dp0"
 
 
-echo Waiting for Phone
+echo Waiting for Phone...
 adb wait-for-device
 
-ADB devices
+adb devices
 adb push rooted.prop /data/preinstall_md5/
- adb push root.sh /data/preinstall_md5/
- adb shell "ln -s /sys/kernel/uevent_helper /data/preinstall_md5/first.md5"
- adb shell "ln -s /sys/class/mem/null/uevent /data/preinstall_md5/second.md5"
- adb shell "chmod 777 /data/preinstall_md5/root.sh"
+adb push root.sh /data/preinstall_md5/
+adb shell "ln -s /sys/kernel/uevent_helper /data/preinstall_md5/first.md5"
+adb shell "ln -s /sys/class/mem/null/uevent /data/preinstall_md5/second.md5"
+adb shell "chmod 777 /data/preinstall_md5/root.sh"
 
 echo Without closing this window, shutdown the phone
 echo and restart it in bootloader mode (power + UP key in the keyboard)
@@ -45,11 +45,11 @@ echo after it restarts, enable USB debugging and press enter to continue...
 
 pause
 
-echo Waiting for Phone
+echo Waiting for Phone...
 adb wait-for-device
 
 
-adb shell "echo 'doing something on adb, otherwise it doesn't work'"
+adb shell "echo 'doing something on adb, otherwise it does not work'"
 adb reboot
 adb wait-for-device
 
