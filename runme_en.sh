@@ -25,7 +25,7 @@ adb shell "chmod 777 /data/preinstall_md5/root.sh"
 
 echo "Without closing this window, shutdown the phone"
 echo "and restart it in bootloader mode (power + UP key in the keyboard)"
-echo "Once inside the bootloader mode, flash the fixed.sbf from rsdlite"
+echo "Once inside the bootloader mode, flash the fixed.sbf with sbf_flash"
 echo "after it restarts, enable USB debugging and press enter to continue..." 
 read -p ""
 
