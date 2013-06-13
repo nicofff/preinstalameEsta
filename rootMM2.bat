@@ -34,12 +34,11 @@ adb shell "ln -s /sys/kernel/uevent_helper /data/preinstall_md5/first.md5"
 adb shell "ln -s /sys/class/mem/null/uevent /data/preinstall_md5/second.md5"
 adb shell "chmod 777 /data/preinstall_md5/root.sh"
 echo.
-echo Sin cerrar la ventana del cmd, desconectar el celular , apagarlo 
-echo y reinicialo apretando el boton de power, el de la camara, y el de bajar el volumen ;
-echo Una vez que entres en modo bootloader planchar el fixed.sbf 
-echo (esta dentro de "firmware.7z") mediante rsdlite
-echo una vez que arranque, Activar la depuracion usb y conectar el celular, 
-echo luego presionar enter para continuar con el proceso 
+echo Sin cerrar esta ventana, desconecta el celular y apágalo. 
+echo Reinicia el teléfono en modo Bootloader oprimiendo el botón Flecha hacia arriba y el botón de Encendido al mismo tiempo.
+echo Una vez que inicies en modo Bootloader, conecta el celular y flashea mediante RSD Lite el fixed.sbf que esta dentro de la carpeta que descargaste para ser root.
+echo Una Vez terminado el proceso RSD Lite, ciérralo. El celular tendría que haberse reiniciado.
+echo Vuelve a esta ventana, chequea que tu celular este en Modo Depuración. Cuando este en Modo Depuración, y presiona enter para continuar con el proceso.
 pause > nul
 echo.
 echo Waiting for Phone...
